@@ -31,9 +31,10 @@
 
 
 import Vue from 'vue/dist/vue.esm'
+import BootstrapVue from 'bootstrap-vue'
 import App from './app.vue'
 
-
+Vue.use(BootstrapVue)
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
