@@ -33,15 +33,30 @@
 import Vue from 'vue/dist/vue.esm'
 import BootstrapVue from 'bootstrap-vue'
 import App from './app.vue'
-
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#hello',
-    data: {
-      message: "Can you say hello?"
+   data: {
+    dismissSecs: 10,
+    dismissCountDown: 0,
+    showDismissibleAlert: false
+  },
+   methods: {
+    countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown;
     },
+    showAlert() {
+      this.dismissCountDown = this.dismissSecs;
+    }
+  },
     components: { App }
   })
 })
+
+
+
+ 
