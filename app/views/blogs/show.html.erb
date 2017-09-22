@@ -12,7 +12,8 @@
 
 <p>
   <strong>Avatar:</strong>
-  <%= @blog.avatar %>
+<%= image_tag @blog.avatar %>
+  
 </p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |

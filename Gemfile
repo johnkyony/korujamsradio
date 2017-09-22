@@ -60,3 +60,4 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'annotate', require: false
+gem 'tumblr_client', '~> 0.8.5'
