@@ -57,10 +57,7 @@ class Music < ApplicationRecord
 
 
   def self.update_data_from_api
-<<<<<<< HEAD
-      
-=======
->>>>>>> backend_setup
+
     client = Tumblr::Client.new :consumer_key => 'SC33bEI1MgbSTpMgI9ORph6mezAaTCm1uMYG81iOUNWJ4CMJ9f'
     result = client.posts 'thedigitaltraphouse2.tumblr.com', :type => 'audio', :filter => 'raw'
     feed_data = result["posts"]
@@ -84,8 +81,5 @@ class Music < ApplicationRecord
       song
     end     
   end
-<<<<<<< HEAD
-  
-=======
->>>>>>> backend_setup
+
 end
