@@ -28,7 +28,10 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        new_music = Music.save_data_from_api(@blog)
+
+        blog_update_info = Blog.blog_info_from_api(@blog)
+        music_upload = Music.save_data_from_api(@blog)
+
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
       else

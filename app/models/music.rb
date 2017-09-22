@@ -14,7 +14,7 @@
 
 class Music < ApplicationRecord
   belongs_to :blog
-  
+
   def self.save_data_from_api(blog)
     offset = 0
     client = Tumblr::Client.new :consumer_key => 'SC33bEI1MgbSTpMgI9ORph6mezAaTCm1uMYG81iOUNWJ4CMJ9f'
@@ -27,7 +27,9 @@ class Music < ApplicationRecord
       total_post = result["total_posts"]/20
       songs = feed_data.map do |post|
         song = Music.new
-        song.blog_id = blog.blog_id
+ 
+        song.blog_id = blog.id
+
         song.uuid = post["id"]
         song.artwork = post["album_art"]
         if post["album_art"].blank?
@@ -55,7 +57,10 @@ class Music < ApplicationRecord
 
 
   def self.update_data_from_api
+<<<<<<< HEAD
       
+=======
+>>>>>>> backend_setup
     client = Tumblr::Client.new :consumer_key => 'SC33bEI1MgbSTpMgI9ORph6mezAaTCm1uMYG81iOUNWJ4CMJ9f'
     result = client.posts 'thedigitaltraphouse2.tumblr.com', :type => 'audio', :filter => 'raw'
     feed_data = result["posts"]
@@ -79,5 +84,8 @@ class Music < ApplicationRecord
       song
     end     
   end
+<<<<<<< HEAD
   
+=======
+>>>>>>> backend_setup
 end
