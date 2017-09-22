@@ -1,4 +1,17 @@
+# == Schema Information
+#
+# Table name: blogs
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  description :text
+#  avatar      :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Blog < ApplicationRecord
+
 
     def self.blog_info_from_api(blog)
      
@@ -13,7 +26,7 @@ class Blog < ApplicationRecord
           description: blog_data["description"],
           url: "#{blog.name}",
           name: blog_data["title"],
-          avatar: "http://api.tumblr.com/v2/blog/#{blog.url}/avatar/512/"
+          avatar: "http://api.tumblr.com/v2/blog/"+"#{blog.url}"+"/avatar/512/"
       })
        set_blog
      
@@ -21,6 +34,7 @@ class Blog < ApplicationRecord
          
      
     end
+
 
 end
 # user.update({
