@@ -60,3 +60,6 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'annotate', require: false
+# tumblr fix 
+gem 'faraday', '0.12.2'
+gem 'tumblr_client'

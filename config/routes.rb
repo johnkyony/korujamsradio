@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :blogs
+  resources :music
+  
+  resources :blogs do 
+    resources :music
+  end
   get 'pages/home'
 
   devise_for :users, controllers: { omniauth_callbacks: 'auth/callbacks' }

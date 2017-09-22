@@ -20,6 +20,7 @@
 #  uid                    :string
 #  name                   :string
 #  image                  :text
+#  token                  :string
 #
 
 class User < ApplicationRecord

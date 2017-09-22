@@ -20,6 +20,7 @@
 #  uid                    :string
 #  name                   :string
 #  image                  :text
+#  token                  :string
 #
 
 require 'test_helper'
