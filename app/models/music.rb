@@ -15,6 +15,12 @@
 class Music < ApplicationRecord
   belongs_to :blog
 
+  validates_uniqueness_of  :uuid
+  validates_presence_of :uuid
+  validates_presence_of :artwork
+  validates_uniqueness_of  :url
+  validates_presence_of :title 
+
   def self.save_data_from_api(blog)
     offset = 0
     client = Tumblr::Client.new :consumer_key => 'SC33bEI1MgbSTpMgI9ORph6mezAaTCm1uMYG81iOUNWJ4CMJ9f'
