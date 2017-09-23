@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   get 'playlists/index'
 
   resources :blogs
-  resources :music
+  resources :musics
   
   resources :blogs do 
-    resources :music
+    resources :musics
   end
   
   resources :playlists do 

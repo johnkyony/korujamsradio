@@ -1,5 +1,3 @@
-
-
 json.playlist_songs @playlist_songs do |playlistsong|
   json.set! :id, playlistsong.id
   json.set! :name, playlistsong.playlist.name
