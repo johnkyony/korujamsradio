@@ -62,4 +62,5 @@ gem 'koala'
 gem 'annotate', require: false
 gem 'tumblr_client', '~> 0.8.5'
 gem 'sucker_punch'
+gem 'image_searcher', '~> 0.1.5'
 

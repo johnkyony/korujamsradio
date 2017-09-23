@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
+  get 'playlistcoverimage/index'
+
+  get 'playlist_songs/index'
+
+  get 'playlists/index'
+
   resources :blogs
   resources :music
   
   resources :blogs do 
     resources :music
+  end
+  
+  resources :playlists do 
+      resources :playlist_songs
   end
   get 'pages/home'
 
